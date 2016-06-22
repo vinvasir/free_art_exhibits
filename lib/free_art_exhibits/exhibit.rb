@@ -28,7 +28,7 @@ class FreeArtExhibits::Exhibit
    end
    
    def venue_name
-      self.details_page.css("td a").text 
+      self.details_page.css("td a").text
    end
    
    def opening_hours
@@ -43,8 +43,6 @@ class FreeArtExhibits::Exhibit
            cell.text + string + cell.css("br").first.text if cell.text.include?("<br>")
        end.first
    end
-   
-   private
    
    def details_page
       @details_page ||= Nokogiri::HTML(open(self.url)) 
