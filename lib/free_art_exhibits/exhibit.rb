@@ -8,7 +8,7 @@ class FreeArtExhibits::Exhibit
       self.new(
           "http://www.timeout.com" + exhibit.css("a.read-more").attr("href").value + "#tab_panel_2",
           exhibit.css("h3 a").text,
-          exhibit.css("p.feature_item__annotation--truncated")
+          exhibit.css("p.feature_item__annotation--truncated").text
           ) 
     end
    
