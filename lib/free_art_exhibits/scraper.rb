@@ -1,7 +1,7 @@
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
-require_relative 'exhibit.rb'
+#require_relative 'exhibit.rb'
 
 class FreeArtExhibits::Scraper
   def get_page

@@ -1,6 +1,3 @@
-require_relative 'scraper.rb'
-require_relative 'exhibit.rb'
-
 class FreeArtExhibits::CLI
    def call
        FreeArtExhibits::Scraper.new.make_exhibits
