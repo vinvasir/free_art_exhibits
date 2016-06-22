@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 require_relative 'exhibit.rb'
 
-class Scraper
+class FreeArtExhibits::Scraper
   def get_page
     Nokogiri::HTML(open("http://www.timeout.com/newyork/art/the-best-free-art-exhibitions-in-nyc"))
   end
@@ -14,7 +14,7 @@ class Scraper
   
   def make_exhibits
       scrape_index_page.each do |exhibit|
-          e = Exhibit.new_from_index_page(exhibit)
+          e = FreeArtExhibits::Exhibit.new_from_index_page(exhibit)
       end
   end
   
@@ -24,4 +24,4 @@ class Scraper
   #description: card.css("p.feature_item__annotation--truncated")
 end
 
-Scraper.new.make_exhibits
+#Scraper.new.make_exhibits

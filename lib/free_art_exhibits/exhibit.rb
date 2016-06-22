@@ -1,6 +1,6 @@
 require 'pry'
 
-class Exhibit
+class FreeArtExhibits::Exhibit
     attr_accessor :url,:title, :description
     @@all = []
     
