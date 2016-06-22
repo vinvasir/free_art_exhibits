@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Free art exhibits in NYC.}
   spec.homepage      = "http://rubygems.org/gems/free-art-exhibits"
   spec.license       = "MIT"
+  spec.executables << 'free-art-exhibits'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
