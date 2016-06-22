@@ -26,4 +26,28 @@ class FreeArtExhibits::Exhibit
    def self.find(id)
       self.all[id-1] 
    end
+   
+   def venue_name
+      self.details_page.css("td a").text 
+   end
+   
+   def opening_hours
+      self.details_page.css("tr td").select do |cell|
+          cell.text if cell.text.include?("pm") || cell.text.include?("am")
+      end.first
+   end
+   
+   def address
+       string = "\n"
+       self.details_page.css("tr td").select do |cell|
+           cell.text + string + cell.css("br").first.text if cell.text.include?("<br>")
+       end.first
+   end
+   
+   private
+   
+   def details_page
+      @details_page ||= Nokogiri::HTML(open(self.url)) 
+   end
+   
 end
