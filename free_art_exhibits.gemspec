@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'free_art_exhibits/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "free_art_exhibits"
+  spec.name          = "free-art-exhibits"
   spec.version       = FreeArtExhibits::VERSION
   spec.authors       = ["Prateek Vasireddy"]
   spec.email         = ["prat.vasireddy@gmail.com"]
