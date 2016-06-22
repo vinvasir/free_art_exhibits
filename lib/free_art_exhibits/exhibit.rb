@@ -28,13 +28,14 @@ class FreeArtExhibits::Exhibit
    end
    
    def venue_name
-      self.details_page.css("td a").text
+      self.details_page.css("td a").first.text
    end
    
    def opening_hours
-      self.details_page.css("tr td").select do |cell|
+      self.details_page.css("tbody td").select do |cell|
           cell.text if cell.text.include?("pm") || cell.text.include?("am")
       end.first
+      binding.pry
    end
    
    def address

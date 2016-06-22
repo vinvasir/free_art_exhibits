@@ -41,6 +41,8 @@ class FreeArtExhibits::CLI
         puts ""
         puts ""
         puts "Venue:              #{exhibit.venue_name}"
+        puts ""
+        puts ""
         puts "Address:            #{exhibit.address}"
         puts ""
         puts ""
