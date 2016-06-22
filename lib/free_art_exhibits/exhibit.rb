@@ -35,7 +35,6 @@ class FreeArtExhibits::Exhibit
       self.details_page.css("tbody td").select do |cell|
           cell.text if cell.text.include?("pm") || cell.text.include?("am")
       end.first
-      binding.pry
    end
    
    def address
