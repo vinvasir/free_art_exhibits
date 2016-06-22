@@ -13,8 +13,9 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Free art exhibits in NYC.}
   spec.homepage      = "http://rubygems.org/gems/free-art-exhibits"
   spec.license       = "MIT"
-  spec.files         = `git ls-files`.split($\)
-  spec.executables = ['free-art-exhibits']
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.bindir        = "bin"
+  spec.executables   = ['free-art-exhibits']
   spec.require_paths = ["lib", "lib/free_art_exhibits"]
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
