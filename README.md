@@ -1,28 +1,28 @@
 # FreeArtExhibits
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/free_art_exhibits`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides a list of free art exhibits in New York City, scraped from Time Out New York's website.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'free_art_exhibits'
+gem 'free-art-exhibits-cli-gem', '~> 0.4.0'
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
-    $ gem install free_art_exhibits
+    $ gem install free-art-exhibits-cli-gem
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the command bellow and follow the on-screen prompts.
+
+    $ free-art-exhibits
 
 ## Development
 
