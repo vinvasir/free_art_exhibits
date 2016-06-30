@@ -14,7 +14,11 @@ class FreeArtExhibits::Scraper
   
   def make_exhibits
       scrape_index_page.each do |exhibit|
-          e = FreeArtExhibits::Exhibit.new_from_index_page(exhibit)
+          FreeArtExhibits::Exhibit.new(
+            "http://www.timeout.com" + exhibit.css("a.read-more").attr("href").value + "#tab_panel_2",
+            exhibit.css("h3 a").text,
+            exhibit.css("p.feature_item__annotation--truncated").text
+            )
       end
   end
   
